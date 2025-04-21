@@ -1,0 +1,16 @@
+{
+  "name": "learncypress",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "test": "cypress run --browser chrome --headed"
+  },
+  "devDependencies": {
+    "cypress": "^14.3.1"
+  }
+}
