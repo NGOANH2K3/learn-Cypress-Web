@@ -1,4 +1,4 @@
-export class DemoBlazePage {
+export  class DemoBlazePage {
 
     _getCardDatails(){
         let cardData = {}
