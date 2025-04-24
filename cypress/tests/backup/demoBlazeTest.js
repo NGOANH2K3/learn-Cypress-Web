@@ -3,7 +3,7 @@ import products from './products.json';
 describe('DB HomePage', () => {
     it('should be able to get hero card title', () => {
         cy.visit('https://www.demoblaze.com/');
-        new DemoBlazePage().getAllCaraData().then(allCardData => {
+        new DemoBlazePage().getAllCardData().then(allCardData => {
             cy.wrap('').then(()=>{
                 expect(allCardData).to.be.deep.eq(products);
             }); 
@@ -22,7 +22,7 @@ describe('DB HomePage', () => {
                     itemPrice: `$${item.price}`
                 }
             })
-            new DemoBlazePage().getAllCaraData().then(allCardData => {
+            new DemoBlazePage().getAllCardData().then(allCardData => {
                 cy.wrap('').then(()=>{
                     expect(allCardData).to.be.deep.eq(apiProduct);
                 }); 

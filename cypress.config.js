@@ -8,8 +8,8 @@ module.exports = defineConfig({
       return config
     },
     projectId: 'ngoanh',
-    specPattern:"./cypress/tests/**.*",
-    baseUrl: "https://www.amazon.com/"
+    specPattern:"./cypress/tests/**/**.*",
+    baseUrl: "https://www.demoblaze.com/"
   },
   defaultCommandTimeout:10000
 });

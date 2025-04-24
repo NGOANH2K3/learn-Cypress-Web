@@ -7,7 +7,7 @@ export  class DemoBlazePage {
         return new Cypress.Promise(resolve => resolve(cardData))
     }
 
-    getAllCaraData(){
+    getAllCardData(){
         let allCardData = [];
         cy.get('.card').each($card => {
             cy.wrap($card).within(()=> {
