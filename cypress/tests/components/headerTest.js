@@ -5,17 +5,30 @@ describe('Header Component Test', () => {
    
     let headerComp;
 
-    before(()=> {
+    beforeEach(()=> {
         cy.visit('/');
         headerComp = new HeaderComponent();
     })
+
     it('Test for brand logo', () => {
         headerComp.brandLogoImg().should('be.visible')
         headerComp.brandLogo().should('contain.text', BRAND_TEXT)
     });
+
     it('Test for header menu', () => {
-        headerComp.getMenuDetails().then(menuDetailData => {
-            cy.log(JSON.stringify(menuDetailData))
+        const expectedMenuDetail = [
+            {"text":"Home (current)","href":"index.html"},
+            {"text":"Contact","href":"#"},
+            {"text":"About us","href":"#"},
+            {"text":"Cart","href":"cart.html"},
+            {"text":"Log in","href":"#"},
+            {"text":"Sign up","href":"#"}
+        ]
+        headerComp.getMenuDetails().then(actualMenuDetails => {
+            cy.wrap('').then(()=> {
+                expect(actualMenuDetails).to.be.deep.equal(expectedMenuDetail)
+            })
         })
     });
+    
 });

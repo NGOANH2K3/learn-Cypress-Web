@@ -5,14 +5,13 @@ export default class HeaderComponent {
     brandLogoImg = ()=>{
         return cy.get("#nava img")
     }
-    headerMeNuItemList = () => {
+    headerMenuItemList = () => {
         return cy.get(".nav-item a")
     }
 
     getMenuDetails(){
         let menuDetails = [];
-        //excludde "display: none"
-        this.headerMeNuItemList().each($item => {
+        this.headerMenuItemList().each($item => {
             const style = $item.attr("style");
             if(style === undefined || !style.includes("display:none")){
                 menuDetails.push({
@@ -21,7 +20,7 @@ export default class HeaderComponent {
                 })
             }
         })
-
+        
         return new Cypress.Promise(resolve => {
             cy.wrap('').then(() => resolve(menuDetails));
         })
