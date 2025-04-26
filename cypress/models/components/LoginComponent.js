@@ -1,23 +1,17 @@
-export default class HeaderComponent {
-    brandLogo = () => {
-        return cy.get("#nava")
+export default class LoginComponent {
+    getLogin = () => {
+        return cy.get("#logInModal form")
     }
-    brandLogoImg = ()=>{
-        return cy.get("#nava img")
+    getUserName = ()=>{
+        return cy.get("#loginusername")
     }
-    headerMenuItemList = () => {
-        return cy.get(".nav-item a")
+    getPassword = () => {
+        return cy.get("#loginpassword")
     }
-    loginLink = () => {
-        return cy.get("#login2")
+    getClink = () => {
+        return cy.get('[onclick="logIn()"]')
     }
-    signinLink = () => {
-        return cy.get("#signin2")
-    }
-    nameUser = ()=> {
-        return cy.get('#nameofuser')
-    }
-
+    
     getMenuDetails(){
         let menuDetails = [];
         this.headerMenuItemList().each($item => {
