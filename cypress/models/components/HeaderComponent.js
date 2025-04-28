@@ -17,6 +17,9 @@ export default class HeaderComponent {
     nameUser = ()=> {
         return cy.get('#nameofuser')
     }
+    cartLink = ()=> {
+        return cy.get('#cartur')
+    }
 
     getMenuDetails(){
         let menuDetails = [];
