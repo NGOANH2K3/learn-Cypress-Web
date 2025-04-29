@@ -10,7 +10,7 @@
     "open": "cypress open",
     "test": "cypress run --browser chrome --headed",
     "test:mocha-reporter": "npx cypress run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true",
-    "marge-report": "mochawesome-merge \"results/*.json\" > index.json",
+    "marge-report": "find results -name '*.json' -size +2c | xargs mochawesome-merge > index.json || echo 'merge failed'",
     "build-report": "marge index.json",
     "open-report": "npm run marge-report && npm run build-report && serve mochawesome-report",
     "test:cy2": "cross-env CYPRESS_API_URL=http://localhost:1234 cypress-cloud run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true --parallel --record --key somekey"
