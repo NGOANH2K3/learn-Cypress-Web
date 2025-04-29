@@ -13,8 +13,7 @@
     "marge-report": "mochawesome-merge \"results/*.json\" > index.json",
     "build-report": "marge index.json",
     "open-report": "npm run marge-report && npm run build-report && serve mochawesome-report",
-    "test:cy2": "cross-env CYPRESS_API_URL=http://localhost:1234 cypress-cloud run --ci-build-id=$npm_config_ci_build_id --env baseUrl=$npm_config_base_url --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true --parallel --record --key somekey"
-
+    "test:cy2": "cross-env CYPRESS_API_URL=http://localhost:1234 cypress-cloud run --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true --parallel --record --key somekey"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
