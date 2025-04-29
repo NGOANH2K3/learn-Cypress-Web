@@ -1,0 +1,6 @@
+{
+    "projectId": "Cypress-web",
+    "recordKey": "somekey",
+    "cloudServiceUrl": "http://localhost:1234",
+    "ciBuildId": "build-1234"
+  }

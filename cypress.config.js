@@ -1,13 +1,12 @@
 const { defineConfig } = require("cypress");
-
+const { cloudPlugin } = require("cypress-cloud/plugin");
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      
-      return config
+      return cloudPlugin(on, config);
     },
-    projectId: 'ngoanh',
+    projectId: 'Cypress-web',
     reporter: 'mochawesome',
     specPattern:"./cypress/tests/**/*.*",
     baseUrl: "https://www.demoblaze.com"
