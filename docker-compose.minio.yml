@@ -17,15 +17,15 @@ services:
       GITLAB_JOB_RETRIES: 'false'
       MINIO_ACCESS_KEY: 'MW32h3gd6HvjBEgTRx'
       MINIO_SECRET_KEY: 't6NgQWUcEyG2AzaDCVkN6sbWcvDCVkN6sGiZ7'
-      MINIO_ENDPOINT: 'storage'
-      MINIO_URL: 'http://storage:9000'
-      MINIO_PORT: '9000'
+      MINIO_ENDPOINT: 'localhost'
+      MINIO_URL: 'http://localhost'
+      MINIO_PORT: '9001'
       MINIO_USESSL: 'false'
       MINIO_BUCKET: sorry-cypress
       PROBE_LOGGER: "false"
     ports:
       - 1234:1234
-      - 9000:9000
+      - 9001:9000
     depends_on:
       - mongo
 
