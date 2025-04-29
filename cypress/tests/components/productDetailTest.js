@@ -23,4 +23,3 @@ describe('Product Detail Component Test', () => {
 
 });
 
-//test:cy2 --ci-build-id=cypress-api-build-${cypressBuildNum} --env baseUrl=${baseUrl}

@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
       return cloudPlugin(on, config);
     },
-    projectId: 'Cypress-web',
+    projectId: 'Cypress-Web',
     reporter: 'mochawesome',
     specPattern:"./cypress/tests/**/*.*",
     baseUrl: "https://www.demoblaze.com"
