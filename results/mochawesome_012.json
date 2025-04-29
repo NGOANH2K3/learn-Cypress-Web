@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-28T10:05:47.659Z",
+    "end": "2025-04-28T10:05:51.003Z",
+    "duration": 3344,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "70897324-c5f0-4879-bdcb-b13c2120c685",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\productDetailTest.js",
+      "file": "cypress\\tests\\components\\productDetailTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1e6e356-41f4-431c-ac69-da4e3cbd7041",
+          "title": "Product Detail Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to verify product details",
+              "fullTitle": "Product Detail Component Test should be able to verify product details",
+              "timedOut": null,
+              "duration": 3246,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homePageApi.HomePageApi.getHomePageProduct().then(hpApiProduct => {\n  const randomProduct = hpApiProduct[Math.floor(Math.random() * hpApiProduct.length)];\n  const randomProductTitle = randomProduct.title.trim().replace(\"\\n\", '');\n  cy.contains(randomProductTitle).click();\n  const productDetais = new _ProductDetailsComponent.default();\n  productDetais.getProductImg().should('be.visible');\n  productDetais.getProductName().should('have.text', randomProductTitle);\n  productDetais.getProductPrice().should('contain.text', randomProduct.price);\n  productDetais.getProductDesc().should('not.be.empty');\n});",
+              "err": {},
+              "uuid": "d81d7721-08be-4530-b709-1db421b95a27",
+              "parentUUID": "d1e6e356-41f4-431c-ac69-da4e3cbd7041",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d81d7721-08be-4530-b709-1db421b95a27"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3246,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

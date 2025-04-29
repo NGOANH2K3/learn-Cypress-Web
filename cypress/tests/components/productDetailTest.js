@@ -15,7 +15,9 @@ describe('Product Detail Component Test', () => {
             
             const productDetais = new ProductDetailsComponent()
             productDetais.getProductImg().should('be.visible')
-            productDetais.getProductName().should('have.text',randomProductTitle)
+            productDetais.getProductName().invoke('text').then((text) => {
+                expect(text.trim()).to.equal(randomProductTitle)
+            })
             productDetais.getProductPrice().should('contain.text', randomProduct.price)
             productDetais.getProductDesc().should('not.be.empty')
         })

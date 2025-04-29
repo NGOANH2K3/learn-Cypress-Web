@@ -1,7 +1,6 @@
 #Vscode
 /node_modules/
 package-lock.json
-/results/
 /mochawesome-report/
 /data/
 /cypress/screenshots/

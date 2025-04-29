@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-28T09:57:42.629Z",
+    "end": "2025-04-28T09:57:49.154Z",
+    "duration": 6525,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5158a2c5-656e-454f-9c26-a17c297ebd7c",
+      "title": "",
+      "fullFile": "cypress\\tests\\authen\\loginTest.js",
+      "file": "cypress\\tests\\authen\\loginTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cd128f2f-9a06-488d-848c-66f2f50038f8",
+          "title": "Login Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to login with correct creds",
+              "fullTitle": "Login Test should be able to login with correct creds",
+              "timedOut": null,
+              "duration": 4311,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  username,\n  password\n} = LOGIN_CRED;\nlogin(username, password);\nheaderComp.nameUser().should('be.visible');\nheaderComp.nameUser().should('contain.text', `Welcome ${LOGIN_CRED.username}`);",
+              "err": {},
+              "uuid": "de55cc3d-af8b-4cf7-ad95-de2753a19268",
+              "parentUUID": "cd128f2f-9a06-488d-848c-66f2f50038f8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should be able to login with correct creds",
+              "fullTitle": "Login Test should be able to login with correct creds",
+              "timedOut": null,
+              "duration": 948,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  username,\n  password\n} = LOGIN_CRED;\nlogin(username + \"_123\", password);\ncy.on('window:alert', alert => {\n  expect(alert).to.contains(\"User does not exist.\");\n});",
+              "err": {},
+              "uuid": "5e270661-5569-4af6-9702-4846f8ed79e8",
+              "parentUUID": "cd128f2f-9a06-488d-848c-66f2f50038f8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should be able to login with correct creds",
+              "fullTitle": "Login Test should be able to login with correct creds",
+              "timedOut": null,
+              "duration": 1109,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n  username,\n  password\n} = LOGIN_CRED;\nlogin(username, password + \"-123\");\ncy.on('window:alert', alert => {\n  expect(alert).to.contains(\"Wrong password.\");\n});",
+              "err": {},
+              "uuid": "9dedbb8e-fcb1-4adb-88bb-70d9f30f5316",
+              "parentUUID": "cd128f2f-9a06-488d-848c-66f2f50038f8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de55cc3d-af8b-4cf7-ad95-de2753a19268",
+            "5e270661-5569-4af6-9702-4846f8ed79e8",
+            "9dedbb8e-fcb1-4adb-88bb-70d9f30f5316"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6368,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

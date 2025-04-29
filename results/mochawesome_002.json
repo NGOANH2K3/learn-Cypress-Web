@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-28T09:57:57.712Z",
+    "end": "2025-04-28T09:58:17.013Z",
+    "duration": 19301,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "52f0c82b-af16-4410-9005-3eee5feba954",
+      "title": "",
+      "fullFile": "cypress\\tests\\order\\orderItem.js",
+      "file": "cypress\\tests\\order\\orderItem.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4e209775-5052-4058-9e3c-d363d4868e60",
+          "title": "Order Item Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "order item as guest",
+              "fullTitle": "Order Item Component Test order item as guest",
+              "timedOut": null,
+              "duration": 6499,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "purchaseItem();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 5000ms: `cy.wait()` timed out waiting `5000ms` for the 1st request to the route: `entries`. No request ever occurred.\n\nhttps://on.cypress.io/wait",
+                "estack": "CypressError: Timed out retrying after 5000ms: `cy.wait()` timed out waiting `5000ms` for the 1st request to the route: `entries`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:76205:18)\n    at Object.errByPath (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:76259:10)\n    at checkForXhr (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:137446:84)\n    at <unknown> (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:137472:28)\n    at tryCatcher (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:145828:68)\n    at <unknown> (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:145769:14)\n    at tryCatcher (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://www.demoblaze.com/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at HomePageApi._waitForEntriesRequest (webpack://learncypress/./cypress/support/homePageApi.js:14:11)\n    at HomePageApi.getHomePageProduct (webpack://learncypress/./cypress/support/homePageApi.js:3:13)\n    at purchaseItem (webpack://learncypress/./cypress/tests/order/orderItem.js:43:16)\n    at Context.eval (webpack://learncypress/./cypress/tests/order/orderItem.js:13:7)",
+                "diff": null
+              },
+              "uuid": "8dfd95e7-f0d7-4b17-8e85-bfc6ce27cba9",
+              "parentUUID": "4e209775-5052-4058-9e3c-d363d4868e60",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Order item as loggin in user",
+              "fullTitle": "Order Item Component Test Order item as loggin in user",
+              "timedOut": null,
+              "duration": 12627,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//loggin\nconst LOGIN_CRED = {\n  username: 'ngoanh',\n  password: '123456'\n};\nconst {\n  username,\n  password\n} = LOGIN_CRED;\nlogin(username, password);\n// Purchase\npurchaseItem();",
+              "err": {},
+              "uuid": "da943b5a-c75d-4c94-987d-8778bf6e0201",
+              "parentUUID": "4e209775-5052-4058-9e3c-d363d4868e60",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "da943b5a-c75d-4c94-987d-8778bf6e0201"
+          ],
+          "failures": [
+            "8dfd95e7-f0d7-4b17-8e85-bfc6ce27cba9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19126,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
