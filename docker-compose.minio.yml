@@ -1,5 +1,3 @@
-
-
 services:
   mongo:
     image: mongo:4.4
@@ -19,8 +17,8 @@ services:
       GITLAB_JOB_RETRIES: 'false'
       MINIO_ACCESS_KEY: 'MW32h3gd6HvjBEgTRx'
       MINIO_SECRET_KEY: 't6NgQWUcEyG2AzaDCVkN6sbWcvDCVkN6sGiZ7'
-      MINIO_ENDPOINT: 'localhost'
-      MINIO_URL: 'http://localhost'
+      MINIO_ENDPOINT: 'storage'
+      MINIO_URL: 'http://storage:9000'
       MINIO_PORT: '9000'
       MINIO_USESSL: 'false'
       MINIO_BUCKET: sorry-cypress
@@ -57,13 +55,14 @@ services:
 
   storage:
     image: minio/minio
-    network_mode: service:director
     environment:
       MINIO_ACCESS_KEY: 'MW32h3gd6HvjBEgTRx'
       MINIO_SECRET_KEY: 't6NgQWUcEyG2AzaDCVkN6sbWcvDCVkN6sGiZ7'
     volumes:
       - ./data/data-minio-cypress:/data
     command: server /data
+    ports:
+      - 9000:9000
 
   createbuckets:
     image: minio/mc
